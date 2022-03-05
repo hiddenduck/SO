@@ -33,7 +33,7 @@ ssize_t readln(int fd, char *line, size_t size){ // faz apenas a verificacao
     while(i<size && readc(fd, &line[i])>0){
         i++;
         if (line[i-1]=='\n') // (char *), cast para char desnecessário, por vezes o compilador pode reclamar
-            return i;
+            return i; // ou break
     }
 
     return i;
