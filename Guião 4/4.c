@@ -21,11 +21,13 @@ int main(int argc, char* argv[]){
         else if(changeIN){
             fd_input = open(argv[i], O_RDONLY);
             dup2(fd_input, 0);
+            close(fd_input);
             changeIN = 0;
         }
         else if(changeOut){
             fd_output = open(argv[i], O_WRONLY|O_CREAT|O_TRUNC, 0600);
             dup2(fd_output, 1);
+            close(fd_output);
             changeOut = 0;
         }else{
             Args[j++] = argv[i];
