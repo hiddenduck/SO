@@ -32,8 +32,9 @@ int main(int argc, char* argv[]){
         }   
     }
 
-    Args[i] = NULL;
-    execvp(Args[0], Args);
-
+    if(j!=0){
+        Args[i] = NULL;
+        execvp(Args[0], Args);
+    }
     return 0;
 }
