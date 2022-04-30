@@ -1,0 +1,9 @@
+*.txt
+cmake-build-debug/
+.idea/
+html/
+*.exe
+*.out
+latex/
+Doxyfile
+xml/
